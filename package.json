@@ -1,0 +1,15 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "This proxy app sets up a proxy with two URLs http://localhost:80/api -> http://localhost:8080/api/ http://localhost:80/ -> http://localhost:8100/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0",
+    "http-proxy-middleware": "^0.19.1"
+  }
+}
