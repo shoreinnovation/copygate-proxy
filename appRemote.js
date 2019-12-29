@@ -23,11 +23,11 @@ for (route of routes) {
     app.use(route.route, proxy({ target: route.address, changeOrigin: true, logLevel: 'debug' } ));
 }
 */
-app.use('/api', proxy('https://fondguru.se:9443/api', { secure: false, logLevel: 'debug'} ));
-app.use('/api-docs', proxy('http://localhost:8080/api-docs', { logLevel: 'debug'} ));
-app.use('/', proxy('http://localhost:8100/', { logLevel: 'debug'} ));
+app.use('/api', proxy('https://copygate.se:443/api', { secure: false, logLevel: 'debug'} ));
+app.use('/api-docs', proxy('http://localhost:3000/api-docs', { logLevel: 'debug'} ));
+app.use('/', proxy('http://localhost:4200/', { logLevel: 'debug'} ));
 
-app.listen(9443, () => {
-    console.log('Proxy listening on port 9443');
+app.listen(8080, () => {
+    console.log('Proxy listening on port 8080');
 });
 
