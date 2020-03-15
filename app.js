@@ -27,7 +27,7 @@ app.use('/api', proxy('http://localhost:3000/api', { logLevel: 'debug'} ));
 app.use('/api-docs', proxy('http://localhost:3000/api-docs', { logLevel: 'debug'} ));
 app.use('/', proxy('http://localhost:4200/', { logLevel: 'debug'} ));
 
-app.listen(9443, () => {
-    console.log('Proxy listening on port 9443');
+app.listen(8080, () => {
+    console.log('Proxy listening on port 8080');
 });
 
