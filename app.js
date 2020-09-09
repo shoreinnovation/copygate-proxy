@@ -24,6 +24,7 @@ for (route of routes) {
 }
 */
 app.use('/api', proxy('http://localhost:3000/api', { logLevel: 'debug'} ));
+app.use('/public', proxy('http://localhost:3000/public', { logLevel: 'debug'} ));
 app.use('/api-docs', proxy('http://localhost:3000/api-docs', { logLevel: 'debug'} ));
 app.use('/', proxy('http://localhost:4200/', { logLevel: 'debug'} ));
 

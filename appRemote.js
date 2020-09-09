@@ -24,6 +24,7 @@ for (route of routes) {
 }
 */
 app.use('/api', proxy('https://copygate.se:443/api', { secure: false, logLevel: 'debug'} ));
+app.use('/public', proxy('https://copygate.se:443/public', { secure: false, logLevel: 'debug'} ));
 app.use('/api-docs', proxy('http://localhost:3000/api-docs', { logLevel: 'debug'} ));
 app.use('/', proxy('http://localhost:4200/', { logLevel: 'debug'} ));
 
